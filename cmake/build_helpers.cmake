@@ -284,9 +284,9 @@ endmacro()
 
 
 function(downloadImHexPatternsFiles)
-    set(PATTERNS_FOLDERS_TO_INSTALL constants encodings includes patterns magic)
+    set(PATTERNS_FOLDERS_TO_INSTALL patterns includes magic constants encodings)
     foreach (FOLDER ${PATTERNS_FOLDERS_TO_INSTALL})
-	 install(DIRECTORY "${PROJECT_SOURCE_DIR}/tmp/imhex-patterns/${FOLDER}" DESTINATION "./")
+        install(DIRECTORY "${PROJECT_SOURCE_DIR}/tmp/imhex-patterns/${FOLDER}" DESTINATION "share/imhex")
     endforeach()
 
 endfunction()
