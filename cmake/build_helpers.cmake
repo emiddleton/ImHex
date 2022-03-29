@@ -284,17 +284,9 @@ endmacro()
 
 
 function(downloadImHexPatternsFiles)
-    FetchContent_Declare(
-        imhex_patterns
-        GIT_REPOSITORY https://github.com/WerWolv/ImHex-Patterns.git
-        GIT_TAG master
-    )
-
-    FetchContent_Populate(imhex_patterns)
-
     set(PATTERNS_FOLDERS_TO_INSTALL constants encodings includes patterns magic)
     foreach (FOLDER ${PATTERNS_FOLDERS_TO_INSTALL})
-        install(DIRECTORY "${imhex_patterns_SOURCE_DIR}/${FOLDER}" DESTINATION "./")
+	 install(DIRECTORY "${PROJECT_SOURCE_DIR}/tmp/imhex-patterns/${FOLDER}" DESTINATION "./")
     endforeach()
 
 endfunction()

@@ -26,3 +26,7 @@
 	path = lib/external/libromfs
 	url = https://github.com/WerWolv/libromfs
 	ignore = dirty
+[submodule "tmp/mhex-patterns"]
+	path = tmp/imhex-patterns
+	url = https://github.com/WerWolv/ImHex-Patterns.git
+	branch = master
